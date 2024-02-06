@@ -10,7 +10,7 @@ const initialFrame: Frame = {
   version: "vNext",
   buttons: [
     {
-      label: "Random image",
+      label: "Choose your side",
     },
   ],
   postUrl: `${process.env.NEXT_PUBLIC_HOST}/frames`,
@@ -20,12 +20,12 @@ console.log(process.env.NEXT_PUBLIC_HOST)
  
 // Export Next.js metadata
 export const metadata: Metadata = {
-  title: "Random Image Frame",
-  description: "This is an example of a simple frame using frames.js",
+  title: "side",
+  description: "choose side",
   openGraph: {
     images: [
       {
-        url: "https://picsum.photos/seed/frames.js/600",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRhy5_uMcls28auaUHiMqKsoz_ndo3QjXhTw&usqp=CAU",
       },
     ],
   },

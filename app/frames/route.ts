@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
  
   const randomInt = Math.floor(Math.random() * 100);
   const imageUrlBase = `https://picsum.photos/seed/${randomInt}`;
- 
+  console.log(message.data.fid)
   // Use the frame message to build the frame
   const frame: Frame = {
     version: "vNext",
