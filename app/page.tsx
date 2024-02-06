@@ -6,14 +6,14 @@ import type { Metadata } from "next";
  
 // Declare the frame
 const initialFrame: Frame = {
-  image: "https://picsum.photos/seed/frames.js/1146/600",
+  image: "../public/chose.jpg",
   version: "vNext",
   buttons: [
     {
       label: "Choose your side",
     },
   ],
-  postUrl: `${process.env.NEXT_PUBLIC_HOST}/frames`,
+  postUrl: `${process.env.NEXT_PUBLIC_HOST}/choose-side`,
 };
 
 console.log(process.env.NEXT_PUBLIC_HOST)
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRhy5_uMcls28auaUHiMqKsoz_ndo3QjXhTw&usqp=CAU",
+        url: "../public/chose.jpg",
       },
     ],
   },
