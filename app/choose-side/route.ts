@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
   if(message.data) {
     const frame: Frame = {
       version: "vNext",
-      image: `../public/chose.jpg`,
+      image: `${process.env.NEXT_PUBLIC_HOST}/chose.jpg`,
       buttons: [
         {
           label: `Blue`,

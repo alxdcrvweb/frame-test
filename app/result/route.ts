@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
   if (message.data.frameActionBody.buttonIndex == 1) {
     const frame: Frame = {
       version: "vNext",
-      image: `../public/blue.jpg`,
+      image: `${process.env.NEXT_PUBLIC_HOST}/blue.jpg`,
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
     };
 
@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
   } else if (message.data.frameActionBody.buttonIndex == 2) {
     const frame: Frame = {
       version: "vNext",
-      image: `../public/red.jpg`,
+      image: `${process.env.NEXT_PUBLIC_HOST}/red.jpg`,
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
     };
 
