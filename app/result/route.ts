@@ -35,8 +35,6 @@ export async function POST(request: NextRequest) {
       image: `${process.env.NEXT_PUBLIC_HOST}/red.jpg`,
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
     };
-
-    // Return the frame as HTML
     const html = getFrameHtml(frame);
 
     return new Response(html, {
