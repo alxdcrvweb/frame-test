@@ -14,7 +14,7 @@ const initialFrame: Frame = {
       action: "post",
     },
   ],
-  postUrl: `${process.env.NEXT_PUBLIC_HOST}/choose-side`,
+  postUrl: `${process.env.NEXT_PUBLIC_HOST}/choose`,
 };
 
 // console.log(process.env.NEXT_PUBLIC_HOST)
