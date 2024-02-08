@@ -20,11 +20,11 @@ export async function POST(request: NextRequest) {
       buttons: [
         {
           label: `Blue`,
-          action: "post_redirect"
+          action: "post"
         },
         {
           label: `Red`,
-          action: "post_redirect"
+          action: "post"
         }
       ],
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
