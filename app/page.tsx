@@ -11,7 +11,7 @@ const initialFrame: Frame = {
   buttons: [
     {
       label: "Choose your side",
-      action: "post",
+      action: "post_redirect",
     },
   ],
   postUrl: `${process.env.NEXT_PUBLIC_HOST}/choose`,
