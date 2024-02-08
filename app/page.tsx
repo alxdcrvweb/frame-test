@@ -6,11 +6,12 @@ import type { Metadata } from "next";
  
 // Declare the frame
 const initialFrame: Frame = {
-  image: "${process.env.NEXT_PUBLIC_HOST}/chose.jpg",
+  image: `${process.env.NEXT_PUBLIC_HOST}/chose.jpg`,
   version: "vNext",
   buttons: [
     {
       label: "Choose your side",
+      action: "post_redirect",
     },
   ],
   postUrl: `${process.env.NEXT_PUBLIC_HOST}/choose-side`,
