@@ -12,11 +12,12 @@ export async function POST(request: NextRequest) {
   if (!isValid || !message) {
     return new Response("Invalid message", { status: 400 });
   }
+  const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/og?time=${new Date().toISOString()}`
   console.log(message.data);
   if(message.data) {
     const frame: Frame = {
       version: "vNext",
-      image: `${process.env.NEXT_PUBLIC_HOST}/chose.jpg`,
+      image: imageUrl,
       buttons: [
         {
           label: `Blue`,
