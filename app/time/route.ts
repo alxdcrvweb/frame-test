@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
           target: "https://mrphs.io/",
         },
       ],
-      postUrl: process.env.NEXT_PUBLIC_HOST+"/",
+      postUrl: process.env.NEXT_PUBLIC_HOST + "/main",
     };
 
     // Return the frame as HTML
@@ -65,19 +65,19 @@ export async function POST(request: NextRequest) {
       buttons: [
         {
           label: `Sleep Fraction`,
-          action: "post"
+          action: "post",
         },
         {
           label: `Vigilant Fraction`,
-          action: "post"
-        }
+          action: "post",
+        },
       ],
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
     };
-   
+
     // Return the frame as HTML
     const html = getFrameHtml(frame);
-   
+
     return new Response(html, {
       headers: {
         "Content-Type": "text/html",
