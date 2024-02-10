@@ -16,7 +16,18 @@ export async function POST(request: NextRequest) {
   if (message.data.frameActionBody.buttonIndex == 1) {
     const frame: Frame = {
       version: "vNext",
-      image: `${process.env.NEXT_PUBLIC_HOST}/blue.jpg`,
+      image: `${process.env.NEXT_PUBLIC_HOST}/sleepers.jpg`,
+      buttons: [
+        {
+          label: `Follow and recast`,
+          action: "post"
+        },
+        {
+          label: `Learn more about project`,
+          action: "link",
+          target: 'https://mrphs.io/'
+        }
+      ],
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
     };
 
@@ -32,7 +43,7 @@ export async function POST(request: NextRequest) {
   } else if (message.data.frameActionBody.buttonIndex == 2) {
     const frame: Frame = {
       version: "vNext",
-      image: `${process.env.NEXT_PUBLIC_HOST}/red.jpg`,
+      image: `${process.env.NEXT_PUBLIC_HOST}/vigilant.jpg`,
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
     };
     const html = getFrameHtml(frame);
