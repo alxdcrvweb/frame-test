@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     return new Response("Invalid message", { status: 400 });
   }
   const total =
-    Date.parse("2024-02-10 17:11:00 GMT+0100") -
+    Date.parse("2024-02-10 17:20:00 GMT+0100") -
     Date.parse(new Date().toString());
   function getTimeRemaining(total: any) {
     const seconds = Math.floor((total / 1000) % 60);
@@ -37,11 +37,16 @@ export async function POST(request: NextRequest) {
       image: imageUrl,
       buttons: [
         {
+          label: `Back`,
+          action: "post",
+        },
+        {
           label: `Learn More`,
-          action: "post_redirect",
+          action: "link",
+          target: "https://mrphs.io/",
         },
       ],
-      postUrl: `https://mrphs.io/`,
+      postUrl: process.env.NEXT_PUBLIC_HOST+"/",
     };
 
     // Return the frame as HTML

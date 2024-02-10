@@ -40,9 +40,7 @@ export async function GET(request: Request) {
     height: "100%",
     paddingTop: "150px",
   };
-  const logo = {
-    width: "100px",
-  };
+
   return new ImageResponse(
     (
       //@ts-ignore
