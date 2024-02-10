@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     return new Response("Invalid message", { status: 400 });
   }
   const total =
-    Date.parse("2024-02-10 16:05:10 GMT+0100") -
+    Date.parse("2024-02-10 16:21:10 GMT+0100") -
     Date.parse(new Date().toString());
   function getTimeRemaining(total: any) {
     const seconds = Math.floor((total / 1000) % 60);
@@ -27,9 +27,7 @@ export async function POST(request: NextRequest) {
       seconds < 10 ? "0" + seconds : seconds
     }`;
   }
-  const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/og?time=${getTimeRemaining(
-    total
-  )}`;
+  const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/og?time=${total}`;
   console.log(message.data);
   if (total > 0) {
     const frame: Frame = {
