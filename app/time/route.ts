@@ -13,21 +13,23 @@ export async function POST(request: NextRequest) {
     return new Response("Invalid message", { status: 400 });
   }
   const total =
-    Date.parse("2024-02-10 16:21:10 GMT+0100") -
+    Date.parse("2024-02-16 16:35:00 GMT-0100") -
     Date.parse(new Date().toString());
-  // function getTimeRemaining(total: any) {
-  //   const seconds = Math.floor((total / 1000) % 60);
-  //   const minutes = Math.floor((total / 1000 / 60) % 60);
-  //   const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  //   const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  function getTimeRemaining(total: any) {
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
 
-  //   return `${days < 10 ? "0" + days : days} : ${
-  //     hours < 10 ? "0" + hours : hours
-  //   } : ${minutes < 10 ? "0" + minutes : minutes} : ${
-  //     seconds < 10 ? "0" + seconds : seconds
-  //   }`;
-  // }
-  const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/og?time=${total}`;
+    return `${days < 10 ? "0" + days : days} : ${
+      hours < 10 ? "0" + hours : hours
+    } : ${minutes < 10 ? "0" + minutes : minutes} : ${
+      seconds < 10 ? "0" + seconds : seconds
+    }`;
+  }
+  const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/og?time=${getTimeRemaining(
+    total
+  )}`;
   console.log(message.data);
   if (total > 0) {
     const frame: Frame = {
@@ -54,7 +56,7 @@ export async function POST(request: NextRequest) {
   } else {
     const frame: Frame = {
       version: "vNext",
-      image: imageUrl,
+      image: `${process.env.NEXT_PUBLIC_HOST}/choseMorph.jpg`,
       buttons: [
         {
           label: `Sleep Fraction`,

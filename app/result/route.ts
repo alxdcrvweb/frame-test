@@ -44,6 +44,17 @@ export async function POST(request: NextRequest) {
     const frame: Frame = {
       version: "vNext",
       image: `${process.env.NEXT_PUBLIC_HOST}/vigilant.jpg`,
+      buttons: [
+        {
+          label: `Follow and recast`,
+          action: "post"
+        },
+        {
+          label: `Learn more about project`,
+          action: "link",
+          target: 'https://mrphs.io/'
+        }
+      ],
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
     };
     const html = getFrameHtml(frame);
