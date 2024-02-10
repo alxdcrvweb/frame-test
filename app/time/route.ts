@@ -15,18 +15,18 @@ export async function POST(request: NextRequest) {
   const total =
     Date.parse("2024-02-10 16:21:10 GMT+0100") -
     Date.parse(new Date().toString());
-  function getTimeRemaining(total: any) {
-    const seconds = Math.floor((total / 1000) % 60);
-    const minutes = Math.floor((total / 1000 / 60) % 60);
-    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  // function getTimeRemaining(total: any) {
+  //   const seconds = Math.floor((total / 1000) % 60);
+  //   const minutes = Math.floor((total / 1000 / 60) % 60);
+  //   const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  //   const days = Math.floor(total / (1000 * 60 * 60 * 24));
 
-    return `${days < 10 ? "0" + days : days} : ${
-      hours < 10 ? "0" + hours : hours
-    } : ${minutes < 10 ? "0" + minutes : minutes} : ${
-      seconds < 10 ? "0" + seconds : seconds
-    }`;
-  }
+  //   return `${days < 10 ? "0" + days : days} : ${
+  //     hours < 10 ? "0" + hours : hours
+  //   } : ${minutes < 10 ? "0" + minutes : minutes} : ${
+  //     seconds < 10 ? "0" + seconds : seconds
+  //   }`;
+  // }
   const imageUrl = `${process.env.NEXT_PUBLIC_HOST}/og?time=${total}`;
   console.log(message.data);
   if (total > 0) {
