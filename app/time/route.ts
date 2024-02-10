@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     return new Response("Invalid message", { status: 400 });
   }
   const total =
-    Date.parse("2024-02-10 16:50:00 GMT+0100") -
+    Date.parse("2024-02-10 17:01:00 GMT+0100") -
     Date.parse(new Date().toString());
   function getTimeRemaining(total: any) {
     const seconds = Math.floor((total / 1000) % 60);
