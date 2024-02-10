@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   other: getFrameFlattened(initialFrame),
 };
 export default async function Home() {
-  let html = getFrameHtml(initialFrame);
-  console.log(html);
-  return html;
+  // let html = getFrameHtml(initialFrame);
+  // console.log(html);
+  return <div>hi</div>;
 }
