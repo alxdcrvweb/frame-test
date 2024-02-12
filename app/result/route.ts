@@ -1,7 +1,12 @@
 // handle frame actions
 // ./app/frames/route.ts
 
-import { getFrameHtml, validateFrameMessage, Frame } from "frames.js";
+import {
+  getFrameHtml,
+  validateFrameMessage,
+  Frame,
+  getTokenUrl,
+} from "frames.js";
 import { NextRequest } from "next/server";
 
 export async function POST(request: NextRequest) {
@@ -19,14 +24,19 @@ export async function POST(request: NextRequest) {
       image: `${process.env.NEXT_PUBLIC_HOST}/sleepers.jpg`,
       buttons: [
         {
-          label: `Follow and recast`,
-          action: "post"
+          label: `Mint`,
+          action: "mint",
+          target: getTokenUrl({
+            address: "0x28e7473cad80fdfdb6e517a3ecc78424ba5c5bf1",
+            tokenId: "3",
+            chainId: 84532,
+          }),
         },
         {
           label: `Learn more about project`,
           action: "link",
-          target: 'https://mrphs.io/'
-        }
+          target: "https://mrphs.io/",
+        },
       ],
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
     };
@@ -46,14 +56,19 @@ export async function POST(request: NextRequest) {
       image: `${process.env.NEXT_PUBLIC_HOST}/vigilant.jpg`,
       buttons: [
         {
-          label: `Follow and recast`,
-          action: "post"
+          label: `Mint`,
+          action: "mint",
+          target: getTokenUrl({
+            address: "0x28e7473cad80fdfdb6e517a3ecc78424ba5c5bf1",
+            tokenId: "2",
+            chainId: 84532,
+          }),
         },
         {
           label: `Learn more about project`,
           action: "link",
-          target: 'https://mrphs.io/'
-        }
+          target: "https://mrphs.io/",
+        },
       ],
       postUrl: `${process.env.NEXT_PUBLIC_HOST}/result`,
     };
