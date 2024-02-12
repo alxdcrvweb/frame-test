@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     return new Response("Invalid message", { status: 400 });
   }
   const total =
-    Date.parse("2024-02-10 17:28:00 GMT+0100") -
+    Date.parse("2024-02-16 18:00:00 GMT+0100") -
     Date.parse(new Date().toString());
   function getTimeRemaining(total: any) {
     const seconds = Math.floor((total / 1000) % 60);
@@ -64,11 +64,11 @@ export async function POST(request: NextRequest) {
       image: `${process.env.NEXT_PUBLIC_HOST}/choseMorph.jpg`,
       buttons: [
         {
-          label: `Sleep Fraction`,
+          label: `Sleep Faction`,
           action: "post",
         },
         {
-          label: `Vigilant Fraction`,
+          label: `Vigilant Faction`,
           action: "post",
         },
       ],
