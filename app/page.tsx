@@ -36,8 +36,8 @@ const initialFrame: Frame = {
 
 // Export Next.js metadata
 export const metadata: Metadata = {
-  title: "side",
-  description: "choose side",
+  title: "Morpheus",
+  description: "Choose your side",
   openGraph: {
     images: [
       {
