@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
           target: getTokenUrl({
             address: "0x28e7473cad80fdfdb6e517a3ecc78424ba5c5bf1",
             tokenId: "3",
-            chainId: 84532,
+            chainId: 8453,
           }),
         },
         {
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
           target: getTokenUrl({
             address: "0x28e7473cad80fdfdb6e517a3ecc78424ba5c5bf1",
             tokenId: "2",
-            chainId: 84532,
+            chainId: 8453,
           }),
         },
         {
