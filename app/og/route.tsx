@@ -49,7 +49,6 @@ export async function GET(request: Request) {
         <div style={{fontFamily: 'ApocLC', fontSize: "20px", color: "white"}}>See you soon</div>
         <div style={{ display: "flex", fontFamily: 'ApocLC', fontSize: "122px", color: "white" }}>
           {time}
-          {/* <h4>time123123 212 12 3213 123 </h4> */}
         </div>
       </div>
     ),
