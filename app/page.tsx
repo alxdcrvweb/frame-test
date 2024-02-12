@@ -50,5 +50,5 @@ export const metadata: Metadata = {
 export default async function Home() {
   // let html = getFrameHtml(initialFrame);
   // console.log(html);
-  return <div>hi</div>;
+  return <div>Morpheus Frame</div>;
 }
